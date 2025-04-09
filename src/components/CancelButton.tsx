@@ -2,7 +2,7 @@ import React, { JSX } from 'react'
 
 export default function CancelButton({
   onClick,
-  text = 'Cancel',
+  text = '取消',
 }: {
   onClick: React.MouseEventHandler
   text?: string

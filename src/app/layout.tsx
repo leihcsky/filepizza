@@ -8,7 +8,7 @@ import { Viewport } from 'next'
 import { ViewTransitions } from 'next-view-transitions'
 
 export const metadata = {
-  title: 'FilePizza • Your files, delivered.',
+  title: '传文件，嗖的一下',
   description: 'Peer-to-peer file transfers in your web browser.',
   charSet: 'utf-8',
   openGraph: {
@@ -36,9 +36,12 @@ export default function RootLayout({
       <html lang="en" suppressHydrationWarning>
         <body>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <FilePizzaQueryClientProvider>
+              <FilePizzaQueryClientProvider>
+              {/* <header className="fixed top-0 left-0 p-4">
+                <img src="/images/logo.png" alt="Logo" className="h-12 w-auto" />
+              </header> */}
               <main>{children}</main>
-              <Footer />
+              {/* <Footer /> */}
               <ModeToggle />
             </FilePizzaQueryClientProvider>
           </ThemeProvider>

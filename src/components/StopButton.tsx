@@ -20,7 +20,7 @@ export default function StopButton({
       >
         <rect x="4" y="4" width="16" height="16" />
       </svg>
-      {isDownloading ? 'Stop Download' : 'Stop Upload'}
+      {isDownloading ? '停止下载' : '停止上传'}
     </button>
   )
 }

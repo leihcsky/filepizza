@@ -39,6 +39,9 @@ async function getOrCreateGlobalPeer(): Promise<Peer> {
 
     globalPeer = new Peer({
       debug: 3,
+      host: "120.55.126.118",
+		  port: 9000,
+      path: "/peerserver",
       config: {
         iceServers,
       },
@@ -93,7 +96,8 @@ export default function WebRTCPeerProvider({
   }
 
   if (!peerValue) {
-    return <Loading text="Initializing WebRTC peer..." />
+    // return <Loading text="Initializing WebRTC peer..." />
+    return <Loading text="文件传输中，请稍等..." />
   }
 
   return (

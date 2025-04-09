@@ -10,7 +10,7 @@ export default tseslint.config({
   ],
   rules: {
     '@typescript-eslint/no-unused-vars': [
-      'error',
+      'off',
       { argsIgnorePattern: '^_' },
     ],
     '@typescript-eslint/no-use-before-define': [
@@ -26,7 +26,7 @@ export default tseslint.config({
     'new-cap': 'off',
     'no-inline-comments': 'off',
     'no-shadow': 'warn',
-    'no-use-before-define': 'off',
+    'no-use-before-define': 'off'
   },
   files: ['src/**/*.ts[x]'],
   ignores: ['legacy', 'node_modules', '.next'],

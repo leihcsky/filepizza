@@ -8,6 +8,7 @@ const streamSaver =
   typeof window !== 'undefined' ? require('streamsaver') : null
 if (typeof window !== 'undefined') {
   streamSaver.mitm = `${window.location.protocol}//${window.location.host}/stream.html`
+  console.log('打开stream文件'+streamSaver.mitm)
 }
 
 type DownloadFileStream = {
@@ -20,6 +21,7 @@ export async function streamDownloadSingleFile(
   file: DownloadFileStream,
   filename: string,
 ): Promise<void> {
+  console.log('streamDownloadSingleFile======')
   const fileStream = streamSaver.createWriteStream(filename, {
     size: file.size,
   })
@@ -38,6 +40,7 @@ export function streamDownloadMultipleFiles(
   files: Array<DownloadFileStream>,
   filename: string,
 ): Promise<void> {
+  console.log('streamDownloadMultipleFiles======')
   const totalSize = files.reduce((acc, file) => acc + file.size, 0)
   const fileStream = streamSaver.createWriteStream(filename, {
     size: totalSize,

@@ -35,7 +35,7 @@ function InitialState({
   return (
     <PageWrapper>
       <div className="flex flex-col items-center space-y-1 max-w-md">
-        <TitleText>Peer-to-peer file transfers in your browser.</TitleText>
+        <TitleText>通过浏览器点对点传送文件</TitleText>
       </div>
       <DropZone onDrop={onDrop} />
       <TermsAcceptance />
@@ -71,8 +71,8 @@ function ConfirmUploadState({
   return (
     <PageWrapper>
       <TitleText>
-        You are about to start uploading{' '}
-        {pluralize(uploadedFiles.length, 'file', 'files')}.
+        你将开始上传{' '}
+        {pluralize(uploadedFiles.length, '个文件', '个文件')}.
       </TitleText>
       <UploadFileList files={fileListData} onRemove={onRemoveFile} />
       <PasswordField value={password} onChange={onChangePassword} />
@@ -97,7 +97,7 @@ function UploadingState({
   return (
     <PageWrapper>
       <TitleText>
-        You are uploading {pluralize(uploadedFiles.length, 'file', 'files')}.
+        你正在上传 {pluralize(uploadedFiles.length, '个文件', '个文件')}.
       </TitleText>
       <UploadFileList files={fileListData} />
       <WebRTCPeerProvider>

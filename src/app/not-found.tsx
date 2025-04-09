@@ -14,7 +14,7 @@ export default async function NotFound(): Promise<JSX.Element> {
     <div className="flex flex-col items-center space-y-5 py-10 max-w-2xl mx-auto">
       <Spinner direction="down" />
       <Wordmark />
-      <TitleText>404: Looks like this slice of FilePizza got eaten!</TitleText>
+      <TitleText>不好了！文件似乎不见了!</TitleText>
       <ReturnHome />
     </div>
   )

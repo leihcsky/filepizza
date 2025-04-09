@@ -68,7 +68,7 @@ export default function ReportTermsViolationButton({
           className="text-sm text-red-600 dark:text-red-400 hover:underline transition-colors duration-200"
           aria-label="Report terms violation"
         >
-          Report suspicious pizza delivery
+          举报可疑的投递 &raquo;
         </button>
       </div>
 
@@ -88,38 +88,37 @@ export default function ReportTermsViolationButton({
               id="modal-title"
               className="text-xl font-bold mb-4 text-stone-900 dark:text-stone-50"
             >
-              Found a suspicious delivery?
+              发现可疑的投递？
             </h2>
 
             <div className="space-y-4 text-stone-700 dark:text-stone-300">
               <p>
-                Before reporting this delivery, please note our FilePizza terms:
+                在举报此次投递之前，请仔细阅读 FileSou 条款：
               </p>
 
               <ul className="list-none space-y-3">
                 <li className="flex items-start gap-3 px-4 py-2 rounded-lg bg-stone-100 dark:bg-stone-800">
                   <span className="text-base">✅</span>
                   <span className="text-sm">
-                    Only upload files you have the right to share
+                    只能上传你有权分享的文件
                   </span>
                 </li>
                 <li className="flex items-start gap-3 px-4 py-2 rounded-lg bg-stone-100 dark:bg-stone-800">
                   <span className="text-base">🔒</span>
                   <span className="text-sm">
-                    Share download links only with known recipients
+                    分享下载链接时，请只与知晓的收件人分享
                   </span>
                 </li>
                 <li className="flex items-start gap-3 px-4 py-2 rounded-lg bg-stone-100 dark:bg-stone-800">
                   <span className="text-base">⚠️</span>
                   <span className="text-sm">
-                    No illegal or harmful content allowed
+                    请勿上传任何违反法律或有害内容
                   </span>
                 </li>
               </ul>
 
               <p>
-                If you've spotted a violation of these terms, click Report to
-                halt its delivery.
+                如果您发现了违反这些条款的行为，请点击“举报”以中止该次传送。
               </p>
             </div>
 
@@ -131,7 +130,7 @@ export default function ReportTermsViolationButton({
                 className={`px-4 py-2 bg-gradient-to-b from-red-500 to-red-600 text-white rounded-md border border-red-600 shadow-sm text-shadow disabled:opacity-50 disabled:cursor-not-allowed enabled:hover:from-red-500 enabled:hover:to-red-700 enabled:hover:shadow-md transition-all duration-200`}
                 aria-label="Confirm report"
               >
-                {isReporting ? 'Reporting...' : 'Report'}
+                {isReporting ? '举报中...' : '举报'}
               </button>
             </div>
           </div>

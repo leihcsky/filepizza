@@ -101,7 +101,7 @@ export default function DropZone({
         onClick={handleClick}
       >
         <span className="text-center text-stone-700 dark:text-stone-200">
-          Drop a file to get started
+          选择文件开始
         </span>
       </button>
     </>

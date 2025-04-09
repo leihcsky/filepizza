@@ -43,7 +43,7 @@ export default function Uploader({
   }, [activeDownloaders])
 
   if (isLoading || !longSlug || !shortSlug) {
-    return <Loading text="Creating channel..." />
+    return <Loading text="开启通道中..." />
   }
 
   if (error) {
@@ -57,14 +57,14 @@ export default function Uploader({
           <QRCode value={shortURL ?? ''} size={QR_CODE_SIZE} />
         </div>
         <div className="flex-auto flex flex-col justify-center space-y-2">
-          <CopyableInput label="Long URL" value={longURL ?? ''} />
-          <CopyableInput label="Short URL" value={shortURL ?? ''} />
+          <CopyableInput label="长地址" value={longURL ?? ''} />
+          <CopyableInput label="短地址" value={shortURL ?? ''} />
         </div>
       </div>
       <div className="mt-6 pt-4 border-t border-stone-200 dark:border-stone-700 w-full">
         <div className="flex justify-between items-center mb-2">
           <h2 className="text-lg font-semibold text-stone-400 dark:text-stone-200">
-            {activeDownloaders} Downloading, {connections.length} Total
+            正在下载 {activeDownloaders} , 共 {connections.length} 
           </h2>
           <StopButton onClick={handleStop} />
         </div>

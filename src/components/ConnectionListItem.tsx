@@ -49,12 +49,12 @@ export function ConnectionListItem({
 
         <div className="text-sm text-stone-500 dark:text-stone-400">
           <div>
-            Completed: {conn.completedFiles} / {conn.totalFiles} files
+            已完成: {conn.completedFiles} / {conn.totalFiles} 个文件
           </div>
           {conn.uploadingFileName &&
             conn.status === UploaderConnectionStatus.Uploading && (
               <div>
-                Current file: {Math.round(conn.currentFileProgress * 100)}%
+                当前文件: {Math.round(conn.currentFileProgress * 100)}%
               </div>
             )}
         </div>

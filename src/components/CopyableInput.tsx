@@ -24,7 +24,7 @@ export function CopyableInput({
           className="px-4 py-2 text-sm text-stone-700 dark:text-stone-200 bg-stone-100 dark:bg-stone-700 hover:bg-stone-200 dark:hover:bg-stone-600 rounded-r border-t border-r border-b border-stone-300 dark:border-stone-600"
           onClick={onCopy}
         >
-          {hasCopied ? 'Copied' : 'Copy'}
+          {hasCopied ? '复制成功' : '复制'}
         </button>
       </div>
     </div>

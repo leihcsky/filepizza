@@ -48,6 +48,7 @@ function useUploaderFileListData(uploadedFiles: UploadedFile[]) {
     return uploadedFiles.map((item) => ({
       fileName: getFileName(item),
       type: item.type,
+      size: item.size,
     }))
   }, [uploadedFiles])
 }
@@ -97,7 +98,8 @@ function UploadingState({
   return (
     <PageWrapper>
       <TitleText>
-        你正在上传 {pluralize(uploadedFiles.length, '个文件', '个文件')}.
+        {/* 你正在上传 {pluralize(uploadedFiles.length, '个文件', '个文件')}. */}
+        对方下载之前，请勿关闭此页面。
       </TitleText>
       <UploadFileList files={fileListData} />
       <WebRTCPeerProvider>
@@ -162,3 +164,4 @@ export default function UploadPage(): JSX.Element {
     />
   )
 }
+

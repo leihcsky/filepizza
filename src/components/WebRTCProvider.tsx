@@ -39,8 +39,8 @@ async function getOrCreateGlobalPeer(): Promise<Peer> {
 
     globalPeer = new Peer({
       debug: 3,
-      host: "120.55.126.118",
-		  port: 9000,
+      host: "www.filesou.cn",
+		  port: 443,
       path: "/peerserver",
       config: {
         iceServers,

@@ -10,7 +10,7 @@ export default function TermsAcceptance(): JSX.Element {
     <>
       <div className="flex justify-center">
         <span className="text-xs text-stone-600 dark:text-stone-400">
-          选择文件, 您将同意这些{' '}
+          上传文件, 表示您同意这些{' '}
           <button
             onClick={() => setShowModal(true)}
             className="underline hover:text-stone-900 dark:hover:text-stone-200 transition-colors duration-200"
@@ -58,13 +58,13 @@ export default function TermsAcceptance(): JSX.Element {
                 <li className="flex items-start gap-3 px-4 py-2 rounded-lg bg-stone-100 dark:bg-stone-800">
                   <span className="text-base">🔒</span>
                   <span className="text-sm">
-                    分享下载链接只给已知的接收者
+                    下载链接只分享给已知的接收者
                   </span>
                 </li>
                 <li className="flex items-start gap-3 px-4 py-2 rounded-lg bg-stone-100 dark:bg-stone-800">
                   <span className="text-base">⚠️</span>
                   <span className="text-sm">
-                    只允许上传没有违法或无害内容
+                    只允许上传合法并无害的内容
                   </span>
                 </li>
               </ul>

@@ -35,7 +35,8 @@ function InitialState({
   return (
     <PageWrapper>
       <div className="flex flex-col items-center space-y-1 max-w-md">
-        <TitleText>通过浏览器点对点传送文件</TitleText>
+        {/* <TitleText>通过浏览器点对点传送文件</TitleText> */}
+        <TitleText>传文件，嗖的一下</TitleText>
       </div>
       <DropZone onDrop={onDrop} />
       <TermsAcceptance />

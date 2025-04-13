@@ -18,7 +18,7 @@ import {
 import { setRotating } from './useRotatingSpinner'
 const cleanErrorMessage = (errorMessage: string): string =>
   errorMessage.startsWith('Could not connect to peer')
-    ? 'Could not connect to the uploader. Did they close their browser?'
+    ? '无法连接到上传者。对方可能已经关闭了浏览器？'
     : errorMessage
 
 const getZipFilename = (): string => `filepizza-download-${Date.now()}.zip`

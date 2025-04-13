@@ -9,7 +9,7 @@ export default function ReturnHome(): JSX.Element {
         className="text-stone-500 dark:text-stone-200 hover:underline"
       >
         {/* Serve up a fresh slice &raquo; */}
-        再传一个 &raquo;
+        上传文件 &raquo;
       </Link>
     </div>
   )

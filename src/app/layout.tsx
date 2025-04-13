@@ -6,6 +6,7 @@ import { ModeToggle } from '../components/ModeToggle'
 import FilePizzaQueryClientProvider from '../components/QueryClientProvider'
 import { Viewport } from 'next'
 import { ViewTransitions } from 'next-view-transitions'
+import Script from 'next/script'
 
 export const metadata = {
   title: '传文件，嗖的一下',
@@ -34,6 +35,19 @@ export default function RootLayout({
   return (
     <ViewTransitions>
       <html lang="en" suppressHydrationWarning>
+        <head>
+          <Script id="baidu-analytics" strategy="afterInteractive">
+            {`
+              var _hmt = _hmt || [];
+              (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?8ac88ad283b7ff6915d9fb5dc06165b1";
+                var s = document.getElementsByTagName("script")[0]; 
+                s.parentNode.insertBefore(hm, s);
+              })();
+            `}
+          </Script>
+        </head>
         <body>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
               <FilePizzaQueryClientProvider>
@@ -41,7 +55,7 @@ export default function RootLayout({
                 <img src="/images/logo.png" alt="Logo" className="h-12 w-auto" />
               </header> */}
               <main>{children}</main>
-              {/* <Footer /> */}
+              <Footer />
               <ModeToggle />
             </FilePizzaQueryClientProvider>
           </ThemeProvider>

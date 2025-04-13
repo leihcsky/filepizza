@@ -12,7 +12,7 @@ export default function InputLabel({
   return (
     <div className="relative flex items-center gap-1">
       <label
-        className={`text-[10px] mb-0.5 font-bold group relative inline-block ${
+        className={`text-[15px] mb-0.5 font-bold group relative inline-block ${
           hasError ? 'text-red-500' : 'text-stone-400'
         }`}
       >

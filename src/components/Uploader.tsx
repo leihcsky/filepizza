@@ -13,7 +13,7 @@ import { ConnectionListItem } from './ConnectionListItem'
 import { ErrorMessage } from './ErrorMessage'
 import { setRotating } from '../hooks/useRotatingSpinner'
 
-const QR_CODE_SIZE = 128
+const QR_CODE_SIZE = 64
 
 export default function Uploader({
   files,
@@ -57,8 +57,8 @@ export default function Uploader({
           <QRCode value={shortURL ?? ''} size={QR_CODE_SIZE} />
         </div>
         <div className="flex-auto flex flex-col justify-center space-y-2">
-          <CopyableInput label="长地址" value={longURL ?? ''} />
-          <CopyableInput label="短地址" value={shortURL ?? ''} />
+          {/* <CopyableInput label="长地址" value={longURL ?? ''} /> */}
+          <CopyableInput label="取件链接" value={shortURL ?? ''} />
         </div>
       </div>
       <div className="mt-6 pt-4 border-t border-stone-200 dark:border-stone-700 w-full">
